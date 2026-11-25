@@ -22,7 +22,7 @@
 
 ## 玩家：怎么用
 
-1. 到 [Releases](../../releases) 下载最新的 `NBA2K20-助手-补丁工具-vX.Y.Z.zip` 并解压。
+1. 到 [Releases](../../releases) 下载最新的补丁工具压缩包 `nba2k20-mobile-assistant-vX.Y.Z.zip` 并解压。
 2. 准备好自己手机里的游戏 APK（v98.0.2），电脑装 Python 3.8+ 和 Java 8+。
 3. 在解压目录运行 `python patch.py 原版游戏.apk`，得到 `NBA2K20-助手-vX.Y.Z.apk`，装到手机上。
 

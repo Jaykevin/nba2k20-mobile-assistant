@@ -49,7 +49,7 @@ python build.py              # 输出 out/NBA2K20-助手.apk
 python build.py --native     # 只编译并检查原生库（导入表白名单）
 python build.py --install    # 构建并 adb install -r（保留游戏数据）
 python re/verify_tables.py   # 离线核对所有挂钩/绑定符号都在游戏库里
-python tools/make_release.py # 打发布包 dist/NBA2K20-助手-补丁工具-vX.Y.Z.zip
+python tools/make_release.py # 打发布包 dist/nba2k20-mobile-assistant-vX.Y.Z.zip（GitHub 会删掉附件名里的中文，所以用英文名）
 ```
 
 版本号在 `gen/gen.py` 的 `VERSION`，面板标题会显示。

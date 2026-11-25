@@ -1,4 +1,4 @@
-"""Packs a release: dist/NBA2K20-助手-补丁工具-v<VERSION>.zip with the patcher, the mod's own build output
+"""Packs a release: dist/nba2k20-mobile-assistant-v<VERSION>.zip (folder NBA2K20-助手-补丁工具-v<VERSION> inside) with the patcher, the mod's own build output
 and the two Apache-2.0 tools the patcher needs. No game content is included.
 Usage: python build.py && python tools/make_release.py"""
 import hashlib
@@ -30,8 +30,9 @@ def main():
     for tool in (apktool, apksigner):
         if not tool or not tool.exists():
             raise SystemExit(f'[失败] 找不到 {tool}（local_config.json 的 apktool_jar / build_tools）')
-    name = f'NBA2K20-助手-补丁工具-v{VERSION}'
-    target = ROOT / 'dist' / f'{name}.zip'
+    name = f'NBA2K20-助手-补丁工具-v{VERSION}'   # folder inside the zip
+    # GitHub strips non-ASCII characters from release asset names, so the zip itself gets an ASCII name.
+    target = ROOT / 'dist' / f'nba2k20-mobile-assistant-v{VERSION}.zip'
     target.parent.mkdir(exist_ok=True)
     meta = {'version': VERSION, 'game': GAME, 'game_lib_sha256': GAME_LIB_SHA256,
             'native_sha256': sha256(lib), 'dex_sha256': sha256(dex)}
