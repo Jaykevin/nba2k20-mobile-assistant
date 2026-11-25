@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.local.nba2k20.backup" android:versionCode="1" android:versionName="1">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+    <application android:label="2K20 Save Backup" android:hasCode="true" />
+    <instrumentation android:name="com.local.nba2k20.backup.SaveBackup" android:targetPackage="com.t2ksports.nba2k20and" android:functionalTest="true" />
+</manifest>

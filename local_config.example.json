@@ -1,0 +1,19 @@
+{
+  "_说明": "复制本文件为 local_config.json（已在 .gitignore 里，不会上传），把下面的路径改成你电脑上的。相对路径按项目根目录算。详见 docs/build.md。",
+  "zig": "C:/tools/zig-x86_64-windows-0.14.1/zig.exe",
+  "android_jar": "C:/Android/sdk/platforms/android-34/android.jar",
+  "r8_jar": "C:/tools/r8.jar",
+  "apktool_jar": "C:/tools/apktool.jar",
+  "java_bin": "C:/Program Files/Java/jdk-21/bin",
+  "build_tools": "C:/Android/sdk/build-tools/34.0.0",
+  "keystore": "C:/keys/my-game.p12",
+  "keystore_password_file": "",
+  "keystore_password": "",
+  "key_alias": "",
+  "expected_cert_sha256": "",
+  "base_apk": "base/base.apk",
+  "adb": "adb",
+  "game_lib": "C:/nba2k20/libnba2k20_clean_opt.so",
+  "symbol_index": "",
+  "capstone_path": ""
+}
