@@ -5,6 +5,7 @@
 #include "rt.h"
 
 #define GAME_LIB "libnba2k20_clean_opt.so"
+#define PROCESS_FRAME_TIME 0x3354  /* float, Game_UpdateCommon reads the process frame duration */
 
 /* --- AI_NBA_ACTOR / AI_PLAYER (players derive from actors; same pointer) --- */
 #define ACTOR_SCALE 0x20          /* float, set by AI_InitNBAActorScale */

@@ -3,7 +3,7 @@ package com.local.nba2k20;
 
 final class S {
     private S() { }
-    static final String VERSION = "1.0.0";
+    static final String VERSION = "1.0.2";
     static final int ANKLE = 0;
     static final int FORCE_THREE = 1;
     static final int FORCE_ALL = 2;
@@ -39,14 +39,15 @@ final class S {
     static final int GRAB_ANIM = 32;
     static final int CPU_SPARE = 33;
     static final int SUPER_GRAB = 34;
-    static final int SCALAR_COUNT = 35;
+    static final int GAME_SPEED = 35;
+    static final int SCALAR_COUNT = 36;
     static final int RULE_BASE = 200, TUNE_BASE = 300, DUNK_BASE = 1000;
     static final int TUNE_KEYS = 28, DUNK_COUNT = 527;
-    static final String[] KEY = {"ankle", "three", "all_shots", "force_dunk", "dunk_range_cm", "super_cpu", "jump_boost", "jump_height_cm", "dunk_variety", "unlock_dunks", "dunk_locked", "air_block", "block_reach_cm", "contact_dunk_boost", "cpu_three_bias", "dunk_mix_enabled", "grab_block_pct", "steal_pct", "steal_keep_ball", "finish_floor_pct", "hot_zones", "on_fire", "slowmo", "slowmo_speed", "slowmo_time", "slowmo_dunk", "slowmo_block", "slowmo_steal", "takeover", "giant", "giant_scale", "grab_block_on", "grab_block_anim", "super_cpu_spare_user", "super_grab"};
-    static final boolean[] BOOL = {false, true, true, true, false, true, true, false, true, true, false, true, false, true, false, true, false, false, true, false, true, true, true, false, false, true, true, true, true, true, false, true, true, true, true};
-    static final int[] DEF = {50, 0, 0, 0, 800, 0, 0, 100, 1, 1, -1, 1, 180, 1, 72, 0, 0, 0, 1, 0, 0, 0, 0, 30, 15, 1, 1, 1, 0, 0, 125, 1, 0, 1, 0};
-    static final int[] MIN = {0, 0, 0, 0, 50, 0, 0, 20, 0, 0, -1, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0};
-    static final int[] MAX = {100, 1, 1, 1, 3000, 1, 1, 200, 1, 1, 526, 1, 400, 1, 100, 1, 100, 100, 1, 100, 1, 1, 1, 80, 30, 1, 1, 1, 1, 1, 160, 1, 1, 1, 1};
+    static final String[] KEY = {"ankle", "three", "all_shots", "force_dunk", "dunk_range_cm", "super_cpu", "jump_boost", "jump_height_cm", "dunk_variety", "unlock_dunks", "dunk_locked", "air_block", "block_reach_cm", "contact_dunk_boost", "cpu_three_bias", "dunk_mix_enabled", "grab_block_pct", "steal_pct", "steal_keep_ball", "finish_floor_pct", "hot_zones", "on_fire", "slowmo", "slowmo_speed", "slowmo_time", "slowmo_dunk", "slowmo_block", "slowmo_steal", "takeover", "giant", "giant_scale", "grab_block_on", "grab_block_anim", "super_cpu_spare_user", "super_grab", "game_speed_pct"};
+    static final boolean[] BOOL = {false, true, true, true, false, true, true, false, true, true, false, true, false, true, false, true, false, false, true, false, true, true, true, false, false, true, true, true, true, true, false, true, true, true, true, false};
+    static final int[] DEF = {50, 0, 0, 0, 800, 0, 0, 100, 1, 1, -1, 1, 180, 1, 72, 0, 0, 0, 1, 0, 0, 0, 0, 30, 15, 1, 1, 1, 0, 0, 125, 1, 0, 1, 0, 100};
+    static final int[] MIN = {0, 0, 0, 0, 50, 0, 0, 20, 0, 0, -1, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 50};
+    static final int[] MAX = {100, 1, 1, 1, 3000, 1, 1, 200, 1, 1, 526, 1, 400, 1, 100, 1, 100, 100, 1, 100, 1, 1, 1, 80, 30, 1, 1, 1, 1, 1, 160, 1, 1, 1, 1, 200};
     static final String[] TUNABLES = {"三分投篮", "中距离投篮", "近距离投篮", "篮下投篮", "上篮", "对抗扣篮", "空中接力", "传球准确", "控球", "速度", "敏捷", "力量", "弹跳", "体力", "体力消耗", "体力恢复", "抢断能力", "抢断效果", "盖帽", "持球防守", "进攻篮板", "防守篮板", "进攻意识", "防守意识", "稳定性", "受伤频率", "打手犯规", "投篮犯规"};
     static final String[] RULES = {"打手犯规", "投篮犯规", "进攻撞人犯规", "阻挡犯规", "争抢球犯规", "背后推人犯规", "非持球防守犯规", "故意犯规", "技术犯规", "走步违例", "二次运球违例", "进攻三秒违例", "防守三秒违例", "回场违例", "八秒违例", "24 秒违例", "发球五秒违例", "背打五秒违例", "严密防守五秒违例", "干扰球违例", "脚踢球违例"};
     static final int ST_READY = 0;

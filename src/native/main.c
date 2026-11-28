@@ -4,6 +4,7 @@
 #include "elfhook.c"
 #include "game.c"
 #include "cfg.c"
+#include "f_speed.c"
 #include "f_basic.c"
 #include "f_dunk.c"
 #include "f_jump.c"
@@ -50,6 +51,7 @@ static void hook_ai_update(float dt) {
 #define G_CPU_BLOCK 8
 
 static HookDef hooks[] = {
+    H(0, "_Z17Game_UpdateCommonP16PROCESS_INSTANCE", hook_game_update_common, orig_game_update_common),
     /* per-frame tick */
     H(0, "_Z9AI_Updatef", hook_ai_update, orig_ai_update),
     /* sliders, movement, ankle breakers */

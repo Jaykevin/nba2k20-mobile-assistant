@@ -7,7 +7,7 @@ from pathlib import Path
 import json
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '1.0.0'   # release version, shown in the panel title and used for release file names
+VERSION = '1.0.2'   # release version, shown in the panel title and used for release file names
 NATIVE = ROOT / 'src' / 'native'
 JAVA = ROOT / 'src' / 'java' / 'com' / 'local' / 'nba2k20'
 DUNK_JSON = ROOT / 'data' / 'dunk-catalog.json'   # 527 single-player dunk animations (CRC, package, name)
@@ -52,6 +52,7 @@ SCALARS = [
     ('GRAB_ANIM', 'grab_block_anim', 'bool', 0, 0, 1),        # prefer the game's own grab animations
     ('CPU_SPARE', 'super_cpu_spare_user', 'bool', 1, 0, 1),   # super CPU leaves forced shots / contact dunks alone
     ('SUPER_GRAB', 'super_grab', 'bool', 0, 0, 1),            # 超级抓帽: every opponent shot ends in the user's hands
+    ('GAME_SPEED', 'game_speed_pct', 'int', 100, 50, 200),   # whole-match time multiplier, percent
 ]
 
 TUNABLES = [  # index == TuneData key used by the native side; keep order

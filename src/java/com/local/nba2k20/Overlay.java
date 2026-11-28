@@ -300,6 +300,7 @@ final class Overlay {
         presets.addView(hint);
 
         LinearLayout common = ui.card(root, "常用");
+        buildGameSpeed(common, page);
         toggle(page, common, "抓帽", "总开关；关掉就完全是原版盖帽。概率和细节在「防守」页。", S.GRAB_ON);
         slider(page, common, "抓帽概率", GRAB_HELP, S.GRAB_PCT, 1, Ui::percent);
         toggle(page, common, "超级抓帽（全场）", SUPER_GRAB_HELP, S.SUPER_GRAB);
@@ -412,7 +413,22 @@ final class Overlay {
     }
 
     // ------------------------------------------------------------------ 趣味
+    private void buildGameSpeed(LinearLayout root, Page page) {
+        slider(page, root, "比赛速度", "全场双方、篮球和计时一起变速，调整后立即生效；1.00× 为正常速度。", S.GAME_SPEED, 5,
+            v -> String.format(java.util.Locale.ROOT, "%.2f×", v / 100f));
+        LinearLayout presets = chips(root);
+        int[] values = {50, 75, 100, 150, 200};
+        String[] names = {"0.5×", "0.75×", "恢复 1×", "1.5×", "2×"};
+        for (int i = 0; i < values.length; i++) {
+            final int value = values[i];
+            chip(presets, names[i], v -> { store.set(S.GAME_SPEED, value); syncAll(); });
+        }
+    }
+
     private void buildFun(LinearLayout root, Page page) {
+        LinearLayout speed = ui.card(root, "比赛节奏");
+        buildGameSpeed(speed, page);
+
         LinearLayout slow = ui.card(root, "高光慢镜头");
         toggle(page, slow, "开启高光慢镜头", "你操控的球员扣篮起跳、盖帽、抢断时，整场进入短暂的子弹时间（游戏扣篮大赛同款慢放）。", S.SLOWMO);
         slider(page, slow, "慢放速度", null, S.SLOWMO_SPEED, 5, v -> (v / 100f) + "×");

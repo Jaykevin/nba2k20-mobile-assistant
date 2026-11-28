@@ -49,6 +49,7 @@ python build.py              # 输出 out/NBA2K20-助手.apk
 python build.py --native     # 只编译并检查原生库（导入表白名单）
 python build.py --install    # 构建并 adb install -r（保留游戏数据）
 python re/verify_tables.py   # 离线核对所有挂钩/绑定符号都在游戏库里
+python tools/test_game_speed.py # 检查比赛速度、暂停及帧时长恢复
 python tools/make_release.py # 打发布包 dist/nba2k20-mobile-assistant-vX.Y.Z.zip（GitHub 会删掉附件名里的中文，所以用英文名）
 ```
 

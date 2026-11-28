@@ -37,7 +37,8 @@ enum {
     CFG_GRAB_ANIM = 32,
     CFG_CPU_SPARE = 33,
     CFG_SUPER_GRAB = 34,
-    CFG_SCALAR_COUNT = 35,
+    CFG_GAME_SPEED = 35,
+    CFG_SCALAR_COUNT = 36,
     CFG_RULE_BASE = 200, RULE_COUNT = 21,
     CFG_TUNE_BASE = 300, TUNE_KEYS = 28,
     CFG_DUNK_BASE = 1000, DUNK_ACTION_COUNT = 527,
@@ -88,6 +89,6 @@ enum {
     ST_COUNT = 41,
     ST_RULE_BASE = 200, ST_DUNK_BASE = 1000,
 };
-static const int cfg_default[CFG_SCALAR_COUNT] = {50, 0, 0, 0, 800, 0, 0, 100, 1, 1, -1, 1, 180, 1, 72, 0, 0, 0, 1, 0, 0, 0, 0, 30, 15, 1, 1, 1, 0, 0, 125, 1, 0, 1, 0};
-static const int cfg_min[CFG_SCALAR_COUNT] = {0, 0, 0, 0, 50, 0, 0, 20, 0, 0, -1, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0};
-static const int cfg_max[CFG_SCALAR_COUNT] = {100, 1, 1, 1, 3000, 1, 1, 200, 1, 1, 526, 1, 400, 1, 100, 1, 100, 100, 1, 100, 1, 1, 1, 80, 30, 1, 1, 1, 1, 1, 160, 1, 1, 1, 1};
+static const int cfg_default[CFG_SCALAR_COUNT] = {50, 0, 0, 0, 800, 0, 0, 100, 1, 1, -1, 1, 180, 1, 72, 0, 0, 0, 1, 0, 0, 0, 0, 30, 15, 1, 1, 1, 0, 0, 125, 1, 0, 1, 0, 100};
+static const int cfg_min[CFG_SCALAR_COUNT] = {0, 0, 0, 0, 50, 0, 0, 20, 0, 0, -1, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 50};
+static const int cfg_max[CFG_SCALAR_COUNT] = {100, 1, 1, 1, 3000, 1, 1, 200, 1, 1, 526, 1, 400, 1, 100, 1, 100, 100, 1, 100, 1, 1, 1, 80, 30, 1, 1, 1, 1, 1, 160, 1, 1, 1, 1, 200};
